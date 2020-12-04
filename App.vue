@@ -15,6 +15,8 @@
 <style lang="scss">
 	/*每个页面公共css */
 	
+	
+	
 	@import "/static/css/style.scss";
 	@import "/static/css/uni.scss";
 
