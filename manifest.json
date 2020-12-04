@@ -1,6 +1,6 @@
 {
-    "name" : "jy",
-    "appid" : "__UNI__1EBA718",
+    "name" : "jyapp",
+    "appid" : "__UNI__BAD74EB",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -57,11 +57,9 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wx43e1ad65498d5b7d",
+        "appid" : "wx738ee709ecdb8dc6",
         "setting" : {
-            "urlCheck" : true,
-            "postcss" : false,
-            "minified" : true
+            "urlCheck" : false
         },
         "usingComponents" : true
     },

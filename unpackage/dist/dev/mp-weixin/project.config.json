@@ -4,14 +4,14 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": true,
-    "postcss": false,
-    "minified": true
+    "urlCheck": false
   },
   "compileType": "miniprogram",
   "libVersion": "",
-  "appid": "wx43e1ad65498d5b7d",
-  "projectname": "jy",
+  "appid": "wx738ee709ecdb8dc6",
+  "projectname": "jyapp",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
   "condition": {
     "search": {
       "list": []

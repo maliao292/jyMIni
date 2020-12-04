@@ -1,0 +1,230 @@
+$maincolor: #FFBE00;
+.commonTitle{
+	padding: 0 30upx ;
+	font-size: 38upx;
+	color: #333;
+	font-weight: 700;
+}
+.homeContent{
+	.proPrice {
+		position: relative;
+		padding: 30upx 30upx 0;
+		overflow: hidden;
+		.halfCircle {
+			.circle {
+				border-bottom-left-radius: 200rpx;
+				border-bottom-right-radius: 200rpx;
+				position: absolute;
+				width: 1500upx;
+				height: 1500upx;
+				top: -1215upx;
+				left: -375upx;
+				background-color: #FFBE00;
+				border-radius: 50%;
+				z-index: -1;
+			}
+		}
+		.priceText {
+			width: 100%;
+			height: 100%;
+			background: rgba(255,255,255,0.9);
+			border-radius: 7px;
+			box-shadow: 0 0 5px #ccc;
+			padding: 30upx 30upx 0;
+			.title{
+				color: #A6A39E;
+				font-size: 14px;
+				text-align: center;
+			}
+			
+			.priceshow{
+				padding: 40upx 100upx;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				>view:first-child{
+					background: $maincolor;
+					border-radius: 10upx;
+					width: 90upx;
+					height: 62upx;
+					line-height: 62upx;
+					text-align: center;
+					font-size: 14px;
+					color: #fff;
+					box-shadow: 0 0 5px #ccc;
+				}
+				>view:nth-child(2){
+					font-size: 26px;
+					font-weight: 700;
+					color: #333;
+				}
+			}
+			.share{
+				border-top: 1px solid #EDEDED;
+				height: 80upx;
+				line-height: 80upx;
+				text-align: center;
+				font-size: 32upx;
+				color: #666;
+			}
+			.silver>view:first-child{
+				background: #D6DDE5;	
+			}
+			.unit{
+				font-weight: 600;
+			}
+		}
+		.openAccount{
+			padding: 40upx;
+			navigator{
+				background: $maincolor;
+				height: 90upx;
+				line-height: 90upx;
+				border-radius: 45upx;
+				text-align: center;
+				color: #fff;
+				font-size: 32upx;
+			}
+		}
+		.homeSwiper{
+			margin-bottom: 40upx;
+			swiper{
+				height: 200upx;
+				image{
+					width: 690upx;
+				}
+			}
+		}
+		.agency{
+			.agencyList{
+				padding-top: 40upx;
+				>view:nth-child(2n){
+					padding-left:15upx;
+				}
+				>view:nth-child(2n-1){
+					padding-right:15upx;
+				}
+				>view {
+					display:inline-block;
+					width: 50%;
+					.itemCon{
+						height: 80upx;
+						box-shadow: 0 0 5px #ccc;
+						border-radius: 10upx;
+						margin-bottom: 30upx;
+						image{
+							width: 100%;
+						}
+					}	
+				}
+			
+			}
+		
+		}
+	}
+}
+
+/* 个人中心*/
+.editPerson{
+	display: flex;
+	justify-content: space-between;
+	padding: 30upx;
+	align-items: center;
+	.editLeft{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.photo{
+			width: 120upx;
+			height: 120upx;
+			border-radius: 50%;
+			overflow: hidden;
+			margin-right: 30upx;
+			image{
+				width: 100%;
+			}
+		}
+		.name{
+			.per_name{
+				color: #333;
+				font-size: 36upx;
+				margin-bottom: 20upx;
+			}
+			.phone{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				image{
+					width: 32upx;
+					margin-right: 10upx;
+				}
+				text{
+					font-size: 24upx;
+					color: #999;
+				}
+			}
+		}
+	}
+	
+	.editRight{
+		font-size: 24upx;
+		color: #999;
+		width: 66px;
+		height: 22px;
+		line-height: 22px;
+		border-radius: 11px;
+		border: 1px solid #cecece;
+		text-align: center;
+	}
+}
+// .personCon{
+// 	height: 100vh;
+// }
+.personLogout{
+	position: fixed;
+	bottom: 20px;
+	left: 0;
+	width: 750upx;
+	.logoutBtn{
+		text-align: center;
+		width: 84%;
+		margin: 0 auto;
+		background-color: $maincolor;
+		color: #fff;
+		height: 92upx;
+		line-height: 92upx;
+		border-radius: 46upx;
+		font-size: 32upx;
+	}
+}
+/* 开户 */
+.accountCon{
+	.listRe{
+		padding-left: 30upx;
+		.line{
+			height: 104upx;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-bottom: 1px solid #ececec;
+			padding-right: 30upx;
+			.listname{
+				text{
+					font-size: 28upx;
+				}
+				picker{
+					display: inline-block;
+					width: 400upx;
+					height: 100upx;
+					border: 1px solid #333;
+				}
+			}
+			.arrow{
+				image{
+					width: 32upx;
+				}
+			}
+		}
+	}
+	.pcikerCon{}
+}

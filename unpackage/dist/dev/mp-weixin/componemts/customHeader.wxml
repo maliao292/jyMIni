@@ -1,0 +1,1 @@
+<view class="content"><view class="myHeader" style="{{'background-color:'+(cusBackgroundColor)+';'}}"><slot></slot></view></view>

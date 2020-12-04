@@ -1,0 +1,11 @@
+
+.myHeader {
+	position: fixed;
+	width: 750rpx;
+	height: 65px;
+	top: 0;
+	left: 0;
+	padding-top: 20px;
+}
+
+

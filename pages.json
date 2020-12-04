@@ -3,47 +3,44 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationStyle": "custom"
+				// "navigationBarTitleText": "金崟家",
+				// "navigationBarBackgroundColor":"#FFBE00",
+				// "navigationBarTextStyle":"white"
 			}
+		}, {
+			"path": "pages/discovery/discovery",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/store/store",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/personCenter/personCenter",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
 		}
 	    ,{
-            "path" : "pages/share/share",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "分享",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/poster/poster",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "components/common/more-share/more-share",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/perCenter/perCenter",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
             "path" : "pages/openAccount/openAccount",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "立即开户",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/editPersonMsg/editPersonMsg",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
@@ -59,30 +56,30 @@
 		"backgroundColor": "#F8F8F8"
 	},
 	"tabBar": {
-		"color": "#7A7E83",
-		"selectedColor": "#3cc51f",
+		"color": "#CCC",
+		"selectedColor": "#FFBE00",
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
 		"list": [{
 			"pagePath": "pages/index/index",
 			"iconPath": "static/image/icons/home.png",
-			"selectedIconPath": "static/image/icons/home-o.png",
-			"text": "组件"
+			"selectedIconPath": "static/image/icons/homea.png",
+			"text": "首页"
 		}, {
-			"pagePath": "pages/share/share",
-			"iconPath": "static/image/icons/category.png",
-			"selectedIconPath": "static/image/icons/category-o.png",
-			"text": "接口"
+			"pagePath": "pages/discovery/discovery",
+			"iconPath": "static/image/icons/discovery.png",
+			"selectedIconPath": "static/image/icons/discovery.png",
+			"text": "发现"
 		}, {
-			"pagePath": "pages/poster/poster",
-			"iconPath": "static/image/icons/category.png",
-			"selectedIconPath": "static/image/icons/category-o.png",
-			"text": "海报"
+			"pagePath": "pages/store/store",
+			"iconPath": "static/image/icons/store.png",
+			"selectedIconPath": "static/image/icons/storea.png",
+			"text": "商城"
 		}, {
-			"pagePath": "pages/perCenter/perCenter",
-			"iconPath": "static/image/icons/my.png",
-			"selectedIconPath": "static/image/icons/my-o.png",
-			"text": "个人中心"
+			"pagePath": "pages/personCenter/personCenter",
+			"iconPath": "static/image/icons/personCenter.png",
+			"selectedIconPath": "static/image/icons/personCentera.png",
+			"text": "我的"
 		}]
 	}
 }
