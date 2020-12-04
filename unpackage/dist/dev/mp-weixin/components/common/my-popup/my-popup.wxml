@@ -1,0 +1,1 @@
+<view class="data-v-475cef26"><view data-event-opts="{{[['touchmove',[['clear',['$event']]]],['tap',[['close',['$event']]]]]}}" class="{{['my-popup data-v-475cef26',showPopup?'my-popup-active':'']}}" catchtouchmove="__e" catchtap="__e"><slot></slot></view></view>

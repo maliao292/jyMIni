@@ -1,0 +1,88 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		}
+	    ,{
+            "path" : "pages/share/share",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "分享",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/poster/poster",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "components/common/more-share/more-share",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/perCenter/perCenter",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/openAccount/openAccount",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/image/icons/home.png",
+			"selectedIconPath": "static/image/icons/home-o.png",
+			"text": "组件"
+		}, {
+			"pagePath": "pages/share/share",
+			"iconPath": "static/image/icons/category.png",
+			"selectedIconPath": "static/image/icons/category-o.png",
+			"text": "接口"
+		}, {
+			"pagePath": "pages/poster/poster",
+			"iconPath": "static/image/icons/category.png",
+			"selectedIconPath": "static/image/icons/category-o.png",
+			"text": "海报"
+		}, {
+			"pagePath": "pages/perCenter/perCenter",
+			"iconPath": "static/image/icons/my.png",
+			"selectedIconPath": "static/image/icons/my-o.png",
+			"text": "个人中心"
+		}]
+	}
+}

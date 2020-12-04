@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/share/share",
+    "pages/poster/poster",
+    "components/common/more-share/more-share",
+    "pages/perCenter/perCenter"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/image/icons/home.png",
+        "selectedIconPath": "static/image/icons/home-o.png",
+        "text": "组件"
+      },
+      {
+        "pagePath": "pages/share/share",
+        "iconPath": "static/image/icons/category.png",
+        "selectedIconPath": "static/image/icons/category-o.png",
+        "text": "接口"
+      },
+      {
+        "pagePath": "pages/poster/poster",
+        "iconPath": "static/image/icons/category.png",
+        "selectedIconPath": "static/image/icons/category-o.png",
+        "text": "海报"
+      },
+      {
+        "pagePath": "pages/perCenter/perCenter",
+        "iconPath": "static/image/icons/my.png",
+        "selectedIconPath": "static/image/icons/my-o.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap0.json"
+}

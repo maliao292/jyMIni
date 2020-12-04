@@ -1,0 +1,1 @@
+<view><my-popup vue-id="6320ebcc-1" selfClose="{{true}}" bind:__l="__l"></my-popup></view>

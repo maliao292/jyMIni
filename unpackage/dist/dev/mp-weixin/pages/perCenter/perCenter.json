@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "my-popup": "/components/common/my-popup/my-popup"
+  }
+}
