@@ -147,24 +147,55 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
     return {
+      index: null,
       array: [{
-        name: '中国' },
+        name: '浦发银行' },
       {
-        name: '美国' },
+        name: '恒丰银行' },
       {
-        name: '巴西' },
-      {
-        name: '日本' }] };
+        name: '中国工商银行' }] };
 
 
   },
   methods: {
     bindPickerChange: function bindPickerChange(e) {
-      console.log('picker发送选择改变，携带值为：' + e.detail.value);
+      console.log(e);
       this.index = e.detail.value;
     } } };exports.default = _default;
 

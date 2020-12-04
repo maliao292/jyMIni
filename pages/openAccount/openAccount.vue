@@ -12,6 +12,38 @@
 					<image src="/static/image/rightArrow.png" mode="widthFix"></image>
 				</view>
 			</view>
+			<view class="line fullInpt">
+				<view class="listname">
+					<text>真实姓名</text>
+					<input type="text" value="" />
+				</view>
+				
+			</view>
+			<view class="line fullInpt">
+				<view class="listname">
+					<text>身份证号</text>
+					<input type="text" value="" />
+				</view>
+				
+			</view>
+			<view class="line fullInpt">
+				<view class="listname">
+					<text>手机号</text>
+					<input type="text" value="" />
+				</view>
+				
+			</view>
+			<view class="line">
+				<view class="listname">
+					<text>验证码</text>
+					<input type="text" value="" />
+				</view>
+				<view class="">
+					<view class="getcode">
+						获取验证码
+					</view>
+				</view>
+			</view>
 		</view>
 	
 	</view>
@@ -21,20 +53,19 @@
 	export default {
 		data() {
 			return {
+				index:null,
 				array: [{
-					name: '中国'
+					name: '浦发银行'
 				}, {
-					name: '美国'
+					name: '恒丰银行'
 				}, {
-					name: '巴西'
-				}, {
-					name: '日本'
+					name: '中国工商银行'
 				}],
 			}
 		},
 		methods: {
 			bindPickerChange: function(e) {
-				console.log('picker发送选择改变，携带值为：' + e.detail.value)
+				console.log(e)
 				this.index = e.detail.value
 			},
 		}
