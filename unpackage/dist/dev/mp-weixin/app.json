@@ -4,7 +4,8 @@
     "pages/share/share",
     "pages/poster/poster",
     "components/common/more-share/more-share",
-    "pages/perCenter/perCenter"
+    "pages/perCenter/perCenter",
+    "pages/openAccount/openAccount"
   ],
   "subPackages": [],
   "window": {
@@ -45,6 +46,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap0.json"
+  "usingComponents": {}
 }

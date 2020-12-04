@@ -1,9 +1,9 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/perCenter/perCenter"],{
 
 /***/ 39:
-/*!*******************************************************************************!*\
-  !*** D:/HBuilderProjects/jy/main.js?{"page":"pages%2FperCenter%2FperCenter"} ***!
-  \*******************************************************************************/
+/*!***********************************************************************************!*\
+  !*** D:/HBuilderProjects/jyMIni/main.js?{"page":"pages%2FperCenter%2FperCenter"} ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17,9 +17,9 @@ createPage(_perCenter.default);
 /***/ }),
 
 /***/ 40:
-/*!************************************************************!*\
-  !*** D:/HBuilderProjects/jy/pages/perCenter/perCenter.vue ***!
-  \************************************************************/
+/*!****************************************************************!*\
+  !*** D:/HBuilderProjects/jyMIni/pages/perCenter/perCenter.vue ***!
+  \****************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -56,9 +56,9 @@ component.options.__file = "pages/perCenter/perCenter.vue"
 /***/ }),
 
 /***/ 41:
-/*!*******************************************************************************************!*\
-  !*** D:/HBuilderProjects/jy/pages/perCenter/perCenter.vue?vue&type=template&id=69c1846c& ***!
-  \*******************************************************************************************/
+/*!***********************************************************************************************!*\
+  !*** D:/HBuilderProjects/jyMIni/pages/perCenter/perCenter.vue?vue&type=template&id=69c1846c& ***!
+  \***********************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -78,9 +78,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 42:
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/HBuilderProjects/jy/pages/perCenter/perCenter.vue?vue&type=template&id=69c1846c& ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/HBuilderProjects/jyMIni/pages/perCenter/perCenter.vue?vue&type=template&id=69c1846c& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -105,9 +105,9 @@ render._withStripped = true
 /***/ }),
 
 /***/ 43:
-/*!*************************************************************************************!*\
-  !*** D:/HBuilderProjects/jy/pages/perCenter/perCenter.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************/
+/*!*****************************************************************************************!*\
+  !*** D:/HBuilderProjects/jyMIni/pages/perCenter/perCenter.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -121,14 +121,14 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 44:
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/HBuilderProjects/jy/pages/perCenter/perCenter.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/HBuilderProjects/jyMIni/pages/perCenter/perCenter.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var myPopup = function myPopup() {__webpack_require__.e(/*! require.ensure | components/common/my-popup/my-popup */ "components/common/my-popup/my-popup").then((function () {return resolve(__webpack_require__(/*! @/components/common/my-popup/my-popup.vue */ 45));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var myPopup = function myPopup() {__webpack_require__.e(/*! require.ensure | components/common/my-popup/my-popup */ "components/common/my-popup/my-popup").then((function () {return resolve(__webpack_require__(/*! @/components/common/my-popup/my-popup.vue */ 51));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
