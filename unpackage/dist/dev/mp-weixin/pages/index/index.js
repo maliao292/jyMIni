@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var customHeader = function customHeader() {__webpack_require__.e(/*! require.ensure | componemts/customHeader */ "componemts/customHeader").then((function () {return resolve(__webpack_require__(/*! ../../componemts/customHeader.vue */ 49));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var customHeader = function customHeader() {__webpack_require__.e(/*! require.ensure | componemts/customHeader */ "componemts/customHeader").then((function () {return resolve(__webpack_require__(/*! ../../componemts/customHeader.vue */ 55));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -211,16 +211,16 @@ __webpack_require__.r(__webpack_exports__);
       indicatorColor: 'rgba(255,255,255,0.5)',
       agencyArr: [{
         id: 1,
-        img: '' },
+        img: '/static/image/bank1.png' },
       {
         id: 2,
-        img: '' },
+        img: '/static/image/bank2.png' },
       {
         id: 3,
-        img: '' },
+        img: '/static/image/bank3.png' },
       {
         id: 4,
-        img: '' }] };
+        img: '/static/image/bank4.png' }] };
 
 
   },

@@ -39,6 +39,7 @@
 		top: 0;
 		left: 0;
 		padding-top: 20px;
+		z-index: 10;
 	}
 	
 </style>

@@ -35,7 +35,7 @@
 				list: [{
 					icon: '/static/image/address.png',
 					name: '收货地址',
-					url: '123',
+					url: '/pages/personAddresslist/personAddresslist',
 					// subText:'欧若拉'
 				}, {
 					icon: '/static/image/service.png',

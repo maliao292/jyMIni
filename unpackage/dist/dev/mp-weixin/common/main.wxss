@@ -102,14 +102,27 @@
   line-height: 80rpx;
   text-align: center;
   font-size: 32rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
   color: #666;
+}
+.homeContent .proPrice .priceText .share image {
+  width: 40rpx;
+  margin-right: 10rpx;
 }
 .homeContent .proPrice .priceText .silver > view:first-child {
   background: #D6DDE5;
 }
 .homeContent .proPrice .priceText view.unit {
   font-weight: 600;
-  font-size: 32rpx !important;
+  font-size: 32rpx;
 }
 .homeContent .proPrice .openAccount {
   padding: 40rpx;
@@ -147,7 +160,6 @@
   width: 50%;
 }
 .homeContent .proPrice .agency .agencyList > view .itemCon {
-  height: 80rpx;
   -webkit-box-shadow: 0 0 5px #ccc;
           box-shadow: 0 0 5px #ccc;
   -webkit-border-radius: 10rpx;
@@ -322,6 +334,7 @@
   -webkit-flex-shrink: 1;
           flex-shrink: 1;
 }
+/* 地址列表 */
 @font-face {
   font-family: uniicons;
   font-weight: normal;

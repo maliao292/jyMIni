@@ -128,7 +128,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var myList = function myList() {__webpack_require__.e(/*! require.ensure | componemts/list */ "componemts/list").then((function () {return resolve(__webpack_require__(/*! ../../componemts/list.vue */ 56));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var myList = function myList() {__webpack_require__.e(/*! require.ensure | componemts/list */ "componemts/list").then((function () {return resolve(__webpack_require__(/*! ../../componemts/list.vue */ 62));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -165,7 +165,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       list: [{
         icon: '/static/image/address.png',
         name: '收货地址',
-        url: '123'
+        url: '/pages/personAddresslist/personAddresslist'
         // subText:'欧若拉'
       }, {
         icon: '/static/image/service.png',

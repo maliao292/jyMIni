@@ -37,8 +37,11 @@
           align-items: center;
   color: #fff;
 }
+.homeHeader text {
+  font-size: 17px;
+}
 .homeHeader image {
-  width: 30px;
+  width: 24px;
   margin-right: 10px;
 }
 

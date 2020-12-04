@@ -5,7 +5,8 @@
     "pages/store/store",
     "pages/personCenter/personCenter",
     "pages/openAccount/openAccount",
-    "pages/editPersonMsg/editPersonMsg"
+    "pages/editPersonMsg/editPersonMsg",
+    "pages/personAddresslist/personAddresslist"
   ],
   "subPackages": [],
   "window": {
@@ -29,7 +30,7 @@
       {
         "pagePath": "pages/discovery/discovery",
         "iconPath": "static/image/icons/discovery.png",
-        "selectedIconPath": "static/image/icons/discovery.png",
+        "selectedIconPath": "static/image/icons/discoverya.png",
         "text": "发现"
       },
       {
@@ -46,6 +47,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap99.json"
+  "usingComponents": {}
 }

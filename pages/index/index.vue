@@ -27,7 +27,7 @@
 						<view class="unit">/ 克</view>
 					</view>
 					<view class="share">
-						立即分享
+						<image src="../../static/image/shareA.png" mode="widthFix"></image>立即分享
 					</view>
 				</view>
 
@@ -49,7 +49,7 @@
 						<view v-for="item in agencyArr" :key="item.id">
 							<view class="itemCon">
 								<view>
-									<!-- <image :src="item.img" mode="widthFix"></image> -->
+									<image :src="item.img" mode="widthFix"></image>
 								</view>
 							</view>
 						</view>
@@ -74,16 +74,16 @@
 				indicatorColor: 'rgba(255,255,255,0.5)',
 				agencyArr: [{
 					id: 1,
-					img: ''
+					img: '/static/image/bank1.png'
 				}, {
 					id: 2,
-					img: ''
+					img: '/static/image/bank2.png'
 				}, {
 					id: 3,
-					img: ''
+					img: '/static/image/bank3.png'
 				}, {
 					id: 4,
-					img: ''
+					img: '/static/image/bank4.png'
 				}]
 			}
 		},
@@ -108,9 +108,11 @@
 		justify-content: center;
 		align-items: center;
 		color: #fff;
-
+		text{
+			font-size: 17px;
+		}
 		image {
-			width: 30px;
+			width: 24px;
 			margin-right: 10px;
 		}
 	}

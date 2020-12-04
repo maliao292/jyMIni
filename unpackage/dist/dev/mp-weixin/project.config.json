@@ -10,26 +10,22 @@
   "libVersion": "",
   "appid": "wx738ee709ecdb8dc6",
   "projectname": "jyapp",
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
   "condition": {
-    "plugin": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
       "list": []
     },
     "game": {
-      "list": []
-    },
-    "gamePlugin": {
+      "current": -1,
       "list": []
     },
     "miniprogram": {
-      "list": [
-        {
-          "name": "pages/openAccount/openAccount",
-          "pathName": "pages/openAccount/openAccount",
-          "scene": null
-        }
-      ]
+      "current": -1,
+      "list": []
     }
   }
 }

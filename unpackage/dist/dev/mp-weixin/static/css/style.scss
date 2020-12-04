@@ -65,14 +65,21 @@ $maincolor: #FFBE00;
 				line-height: 80upx;
 				text-align: center;
 				font-size: 32upx;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 				color: #666;
+				image{
+					width: 40upx;
+					margin-right: 10upx;
+				}
 			}
 			.silver>view:first-child{
 				background: #D6DDE5;	
 			}
 			view.unit{
 				font-weight: 600;
-				font-size: 32upx!important;
+				font-size: 32upx;
 			}
 		}
 		.openAccount{
@@ -109,7 +116,6 @@ $maincolor: #FFBE00;
 					display:inline-block;
 					width: 50%;
 					.itemCon{
-						height: 80upx;
 						box-shadow: 0 0 5px #ccc;
 						border-radius: 10upx;
 						margin-bottom: 30upx;
@@ -259,5 +265,6 @@ $maincolor: #FFBE00;
 			}
 		}
 	}
-	.pcikerCon{}
 }
+
+/* 地址列表 */
