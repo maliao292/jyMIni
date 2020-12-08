@@ -42,7 +42,7 @@
 						</swiper-item>
 					</swiper>
 				</view>
-			
+
 				<view class="agency">
 					<view class="commonTitle">合作机构</view>
 					<view class="agencyList">
@@ -90,6 +90,12 @@
 		components: {
 			customHeader
 		},
+		onShareAppMessage(res) {
+			return {
+				title: '微信小程序测试分享',
+				path: '/pages/common/login'
+			}
+		},
 		onLoad() {
 			uni.getSystemInfo({
 
@@ -108,9 +114,11 @@
 		justify-content: center;
 		align-items: center;
 		color: #fff;
-		text{
+
+		text {
 			font-size: 17px;
 		}
+
 		image {
 			width: 24px;
 			margin-right: 10px;

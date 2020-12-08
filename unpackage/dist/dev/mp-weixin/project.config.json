@@ -11,21 +11,23 @@
   "appid": "wx738ee709ecdb8dc6",
   "projectname": "jyapp",
   "condition": {
-    "search": {
-      "current": -1,
-      "list": []
-    },
-    "conversation": {
-      "current": -1,
+    "plugin": {
       "list": []
     },
     "game": {
-      "current": -1,
+      "list": []
+    },
+    "gamePlugin": {
       "list": []
     },
     "miniprogram": {
-      "current": -1,
-      "list": []
+      "list": [
+        {
+          "name": "pages/personAddresslist/personAddresslist",
+          "pathName": "pages/personAddresslist/personAddresslist",
+          "scene": null
+        }
+      ]
     }
   }
 }

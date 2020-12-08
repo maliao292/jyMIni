@@ -2,6 +2,8 @@
   "navigationBarTitleText": "",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "my-list": "/componemts/list"
+    "my-list": "/componemts/list",
+    "uni-popup": "/componemts/uni-popup/uni-popup",
+    "uni-popup-dialog": "/componemts/uni-popup-dialog/uni-popup-dialog"
   }
 }

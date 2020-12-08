@@ -17,39 +17,39 @@
 					<text>真实姓名</text>
 					<input type="text" value="" />
 				</view>
-				
+
 			</view>
 			<view class="line fullInpt">
 				<view class="listname">
 					<text>身份证号</text>
-					<input type="text" value="" v-model="cardId"/>
+					<input type="text" value="" v-model="cardId" />
 				</view>
-				
+
 			</view>
 			<view class="line fullInpt">
 				<view class="listname">
 					<text>手机号</text>
-					<input type="text" value="" />
+					<input type="number" value="" />
 				</view>
-				
+
 			</view>
 			<view class="line">
 				<view class="listname">
 					<text>验证码</text>
-					<input type="text" value="" />
+					<input type="number" value="" />
 				</view>
 				<view class="">
-					<view class="getcode">
+					<view class="getcode" @click="getcode">
 						获取验证码
 					</view>
 				</view>
 			</view>
 		</view>
-	<view class="personLogout">
-		<view class="logoutBtn" @click="openAccount">
-			立 即 开 户
+		<view class="personLogout">
+			<view class="logoutBtn" @click="openAccount">
+				立 即 开 户
+			</view>
 		</view>
-	</view>
 	</view>
 </template>
 
@@ -57,8 +57,9 @@
 	export default {
 		data() {
 			return {
-				index:null,
-				cardId:'',
+				index: null,
+				countDown: 0,
+				cardId: '',
 				array: [{
 					name: '浦发银行'
 				}, {
@@ -68,13 +69,19 @@
 				}],
 			}
 		},
+		onLoad() {
+		
+		},
 		methods: {
 			bindPickerChange: function(e) {
 				this.index = e.detail.value
 			},
-			openAccount(){
+			getcode() {
+
+			},
+			openAccount() {
 				uni.showModal({
-					title:this.valiteIdCard(this.cardId,'')
+					title: this.valiteIdCard(this.cardId, '')
 				})
 			},
 			valiteIdCard(sId, ShowMsg) {
@@ -120,16 +127,16 @@
 				if (!/^\d{17}(\d|x)$/i.test(sId)) return "您输入的" + ShowMsg + "身份证长度或格式错误,请检查！";
 				sId = sId.replace(/x$/i, "a");
 				if (aCity[parseInt(sId.substr(0, 2))] == null) return "你输入的" + ShowMsg + "身份证地区非法,请检查！";
-				sBirthday = sId.substr(6, 4) + "-" + Number(sId.substr(10, 2)) + "-" + Number(sId.substr(12, 2));
+				var sBirthday = sId.substr(6, 4) + "-" + Number(sId.substr(10, 2)) + "-" + Number(sId.substr(12, 2));
 				var d = new Date(sBirthday.replace(/-/g, "/"));
 				if (sBirthday != (d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate())) return "您输入的" + ShowMsg +
 					"身份证上的出生日期非法,请检查！";
 				for (var i = 17; i >= 0; i--) iSum += (Math.pow(2, i) % 11) * parseInt(sId.charAt(17 - i), 11);
 				if (iSum % 11 != 1) return "您输入的" + ShowMsg + "身份证号非法,请检查！";
 				return "";
-			
+
 			}
-			
+
 		}
 	}
 </script>

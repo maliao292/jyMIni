@@ -239,6 +239,36 @@
   border: 1px solid #cecece;
   text-align: center;
 }
+.nolog {
+  padding: 40rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.nolog button {
+  width: 100%;
+}
+.nolog .photo {
+  width: 120rpx;
+  height: 120rpx;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 30rpx;
+}
+.nolog .photo image {
+  width: 100%;
+}
 .personLogout {
   position: fixed;
   bottom: 20px;
@@ -334,7 +364,38 @@
   -webkit-flex-shrink: 1;
           flex-shrink: 1;
 }
+.commonBtn {
+  padding: 40rpx;
+}
+.commonBtn .con {
+  background: #FFBE00;
+  height: 90rpx;
+  line-height: 90rpx;
+  -webkit-border-radius: 45rpx;
+          border-radius: 45rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+}
 /* 地址列表 */
+.addressContainer {
+  padding: 0 40rpx;
+}
+.addressContainer .addressCon {
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #ececec;
+}
+.addressContainer .addressCon .addressItem .userName {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
 @font-face {
   font-family: uniicons;
   font-weight: normal;

@@ -184,9 +184,26 @@ $maincolor: #FFBE00;
 		text-align: center;
 	}
 }
-// .personCon{
-// 	height: 100vh;
-// }
+.nolog{
+	padding: 40upx;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	button{
+		width: 100%;
+	}
+	.photo{
+		width: 120upx;
+		height: 120upx;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-bottom: 30upx;
+		image{
+			width: 100%;
+		}
+	}
+}
 .personLogout{
 	position: fixed;
 	bottom: 20px;
@@ -267,4 +284,34 @@ $maincolor: #FFBE00;
 	}
 }
 
+
+
+.commonBtn{
+	padding: 40upx;
+	.con{
+		background: $maincolor;
+		height: 90upx;
+		line-height: 90upx;
+		border-radius: 45upx;
+		text-align: center;
+		color: #fff;
+		font-size: 32upx;
+	}
+}
+
 /* 地址列表 */
+.addressContainer{
+	padding: 0 40upx;
+	.addressCon{
+		padding: 20upx 30upx;
+		border-bottom: 1px solid #ececec;
+		.addressItem{
+			.userName{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+	
+	}
+}
