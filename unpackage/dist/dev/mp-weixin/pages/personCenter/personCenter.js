@@ -174,6 +174,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       isLogin: false,
+      message: '这是一条成功消息提示',
       jyuserPhone: {},
       headphoto: '/static/image/photo.png',
       jyuserInfo: {},

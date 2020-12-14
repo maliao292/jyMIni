@@ -6,7 +6,8 @@
     "pages/personCenter/personCenter",
     "pages/openAccount/openAccount",
     "pages/editPersonMsg/editPersonMsg",
-    "pages/personAddresslist/personAddresslist"
+    "pages/personAddresslist/personAddresslist",
+    "pages/personAddressEdit/personAddressEdit"
   ],
   "subPackages": [],
   "window": {

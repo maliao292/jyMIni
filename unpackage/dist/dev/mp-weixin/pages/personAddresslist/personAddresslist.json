@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "收货地址",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-popup": "/componemts/uni-popup/uni-popup",
+    "uni-popup-dialog": "/componemts/uni-popup-dialog/uni-popup-dialog",
+    "uni-popup-message": "/componemts/uni-popup-message/uni-popup-message"
+  }
+}

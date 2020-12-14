@@ -57,6 +57,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/personAddressEdit/personAddressEdit",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
