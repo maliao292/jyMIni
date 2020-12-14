@@ -1,13 +1,8 @@
 <script>
-	import {
-		getSetting
-	} from "./utils/asyncWx.js";
+
 	export default {
 		onLaunch: function() {
-			    // 1 获取 权限状态
-			 getSetting().then(res=>{
-				 console.log(res)
-			 });
+	
 				  
 			      // const scopeAddress = res1.authSetting["scope.address"];
 			let jyUserInfoMsg = uni.getStorageSync('jyUserInfo') ? uni.getStorageSync('jyUserInfo') : {};
@@ -15,7 +10,6 @@
 				uni.getUserInfo({
 					success: (res) => {
 						uni.setStorageSync('jyUserInfo', res.userInfo);
-						console.log(res)
 					},
 					fail: err => {
 						console.log('未授权')
@@ -28,10 +22,10 @@
 
 		},
 		onShow: function() {
-			console.log('App Show')
+			// console.log('App Show')
 		},
 		onHide: function() {
-			console.log('App Hide')
+			// console.log('App Hide')
 		}
 	}
 </script>
@@ -45,7 +39,7 @@
 	@import "/static/css/uni.scss";
 
 	view,
-	text {
+	text,scroll-view {
 		box-sizing: border-box;
 	}
 

@@ -1,5 +1,8 @@
 {
   "navigationBarTitleText": "",
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-search-bar": "/componemts/uni-search-bar/uni-search-bar",
+    "drag-btn": "/componemts/toCart/toCart"
+  }
 }

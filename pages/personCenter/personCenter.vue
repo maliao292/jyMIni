@@ -24,22 +24,20 @@
 			</view>
 			<my-list :list="list"></my-list>
 			<view class="personLogout">
-				<view class="logoutBtn">
+				<view class="logoutBtn" @click="logoutBtn">
 					退出登录
 				</view>
 			</view>
 		</block>
-	
+
 	</view>
 </template>
 
 <script>
 	import myList from '../../componemts/list.vue'
-
 	export default {
 		components: {
 			myList,
-			
 		},
 		data() {
 			return {
@@ -59,7 +57,7 @@
 				}, {
 					icon: '/static/image/order.png',
 					name: '我的订单',
-					url: '123',
+					url: '/pages/personOrders/personOrders',
 					// subText:'欧若拉'
 				}, {
 					icon: '/static/image/coupon.png',
@@ -68,49 +66,55 @@
 				}, {
 					icon: '/static/image/opinion.png',
 					name: '意见反馈',
-					url: '123',
+					url: '/pages/personFeedback/personFeedback',
 				}]
 			}
 		},
 		onLoad() {
 			this.jyuserInfo = uni.getStorageSync('jyUserInfo') ? uni.getStorageSync('jyUserInfo') : {};
 			this.jyuserPhone = uni.getStorageSync('jyUserphone') ? uni.getStorageSync('jyUserphone') : {};
-			if (!!this.jyuserInfo.avatarUrl && !!this.jyuserPhone) {
+			if (!!this.jyuserInfo.avatarUrl && !!this.jyuserPhone.ivdata) {
 				this.isLogin = true
 			}
+
+
 		},
 		methods: {
-
-			getUserInfo(res) {
+			getUserInfo(data) {
 				let code = ''
 				uni.login({
 					success: (res) => {
-						console.log(res);
-						code = res.code
+						code = res.code;
+						let url =
+							`https://api.weixin.qq.com/sns/jscode2session?appid=wx738ee709ecdb8dc6&secret=47e56f4f9d78ee29648f2887c42d869c&js_code=${code}&grant_type=authorization_code`;
+						uni.request({
+							url,
+							success(res) {
+								console.log(res)
+							}
+						})
 					},
 					fail: () => {
 						console.log("未授权");
 					}
 				})
-				console.log(res)
-				this.jyuserInfo = res.detail.userInfo
-				uni.setStorageSync('jyUserInfo', res.detail.userInfo);
+				this.jyuserInfo = data.detail.userInfo
+				uni.setStorageSync('jyUserInfo', data.detail.userInfo);
 				uni.setStorageSync('jyUserphone', {
-					ivdata: res.detail.iv,
-					encrypdata: res.detail.encryptedData,
+					ivdata: data.detail.iv,
+					encrypdata: data.detail.encryptedData,
 				});
-				let url =
-					`https://api.weixin.qq.com/sns/jscode2session?appid=wx738ee709ecdb8dc6&secret=&js_code=${code}&grant_type=authorization_code`;
-				uni.request({
-					url,
-					success(res) {
-						console.log(res)
-					}
-				})
+
 				this.isLogin = true
 			},
 
+			logoutBtn() {
+				uni.makePhoneCall({
 
+					phoneNumber: '03123688777',
+
+				})
+			}
 
 		}
 	}

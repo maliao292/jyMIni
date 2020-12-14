@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-swipe-action": "/componemts/uni-swipe-action/uni-swipe-action",
+    "uni-swipe-action-item": "/componemts/uni-swipe-action-item/uni-swipe-action-item",
+    "uni-number-box": "/componemts/uni-number-box/uni-number-box"
+  }
+}

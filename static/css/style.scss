@@ -1,350 +1,1155 @@
-$maincolor: #FFBE00;
-.commonTitle{
-	padding: 0 30upx ;
-	font-size: 38upx;
-	color: #333;
-	font-weight: 700;
-}
-.homeContent{
-	.proPrice {
-		position: relative;
-		padding: 30upx 30upx 0;
-		overflow: hidden;
-		.halfCircle {
-			.circle {
-				border-bottom-left-radius: 200rpx;
-				border-bottom-right-radius: 200rpx;
-				position: absolute;
-				width: 1500upx;
-				height: 1500upx;
-				top: -1215upx;
-				left: -375upx;
-				background-color: #FFBE00;
-				border-radius: 50%;
-				z-index: -1;
-			}
-		}
-		.priceText {
-			width: 100%;
-			height: 100%;
-			background: rgba(255,255,255,0.9);
-			border-radius: 7px;
-			box-shadow: 0 0 5px #ccc;
-			padding: 30upx 30upx 0;
-			.title{
-				color: #A6A39E;
-				font-size: 14px;
-				text-align: center;
-			}
-			
-			.priceshow{
-				padding: 40upx 100upx;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				>view:first-child{
-					background: $maincolor;
-					border-radius: 10upx;
-					width: 90upx;
-					height: 62upx;
-					line-height: 62upx;
-					text-align: center;
-					font-size: 14px;
-					color: #fff;
-					box-shadow: 0 0 5px #ccc;
-				}
-				>view:nth-child(2){
-					font-size: 26px;
-					font-weight: 700;
-					color: #333;
-				}
-			}
-			.share{
-				border-top: 1px solid #EDEDED;
-				height: 80upx;
-				line-height: 80upx;
-				text-align: center;
-				font-size: 32upx;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				color: #666;
-				image{
-					width: 40upx;
-					margin-right: 10upx;
-				}
-			}
-			.silver>view:first-child{
-				background: #D6DDE5;	
-			}
-			view.unit{
-				font-weight: 600;
-				font-size: 32upx;
-			}
-		}
-		.openAccount{
-			padding: 40upx;
-			navigator{
-				background: $maincolor;
-				height: 90upx;
-				line-height: 90upx;
-				border-radius: 45upx;
-				text-align: center;
-				color: #fff;
-				font-size: 32upx;
-			}
-		}
-		.homeSwiper{
-			margin-bottom: 40upx;
-			swiper{
-				height: 200upx;
-				image{
-					width: 690upx;
-				}
-			}
-		}
-		.agency{
-			.agencyList{
-				padding-top: 40upx;
-				>view:nth-child(2n){
-					padding-left:15upx;
-				}
-				>view:nth-child(2n-1){
-					padding-right:15upx;
-				}
-				>view {
-					display:inline-block;
-					width: 50%;
-					.itemCon{
-						box-shadow: 0 0 5px #ccc;
-						border-radius: 10upx;
-						margin-bottom: 30upx;
-						image{
-							width: 100%;
-						}
-					}	
-				}
-			
-			}
-		
-		}
-	}
-}
+	$maincolor: #FFBE00;
+	$mainBgcolor: #F8F8F8;
 
-/* 个人中心*/
-.editPerson{
-	display: flex;
-	justify-content: space-between;
-	padding: 30upx;
-	align-items: center;
-	.editLeft{
+	@mixin ell() {
+		overflow: hidden;
+		-ms-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	@mixin myBtn{
+			height: 90rpx;
+			line-height: 90rpx;
+			border-radius: 45rpx;
+			text-align: center;
+			color: #fff;
+			font-size: 32rpx;
+			text-align: center;
+			margin: 0 auto;
+	}
+	@mixin blockBg {
+		background-color: #fff;
+		border-radius: 10upx;
+		box-shadow: 0 0 20upx #eee;
+		padding: 0 30upx;
+	}
+
+	@mixin myFlex($col) {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		.photo{
+
+		@if $col==col {
+			flex-direction: column;
+		}
+	}
+
+	.commonTitle {
+		padding: 0 30upx;
+		font-size: 38upx;
+		color: #333;
+		font-weight: 700;
+	}
+
+	.homeContent {
+		.proPrice {
+			position: relative;
+			padding: 30upx 30upx 0;
+			overflow: hidden;
+
+			.halfCircle {
+				.circle {
+					border-bottom-left-radius: 200rpx;
+					border-bottom-right-radius: 200rpx;
+					position: absolute;
+					width: 1500upx;
+					height: 1500upx;
+					top: -1215upx;
+					left: -375upx;
+					background-color: #FFBE00;
+					border-radius: 50%;
+					z-index: -1;
+				}
+			}
+
+			.priceText {
+				width: 100%;
+				height: 100%;
+				background: rgba(255, 255, 255, 0.9);
+				border-radius: 7px;
+				box-shadow: 0 0 5px #ccc;
+				padding: 30upx 30upx 0;
+
+				.title {
+					color: #A6A39E;
+					font-size: 14px;
+					text-align: center;
+				}
+
+				.priceshow {
+					padding: 40upx 100upx;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					>view:first-child {
+						background: $maincolor;
+						border-radius: 10upx;
+						width: 90upx;
+						height: 62upx;
+						line-height: 62upx;
+						text-align: center;
+						font-size: 14px;
+						color: #fff;
+						box-shadow: 0 0 5px #ccc;
+					}
+
+					>view:nth-child(2) {
+						font-size: 26px;
+						font-weight: 700;
+						color: #333;
+					}
+				}
+
+				.share {
+					border-top: 1px solid #EDEDED;
+					height: 80upx;
+					line-height: 80upx;
+					text-align: center;
+					font-size: 32upx;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: #666;
+
+					image {
+						width: 40upx;
+						margin-right: 10upx;
+					}
+				}
+
+				.silver>view:first-child {
+					background: #D6DDE5;
+				}
+
+				view.unit {
+					font-weight: 600;
+					font-size: 32upx;
+				}
+			}
+
+			.openAccount {
+				padding: 40upx;
+
+				navigator {
+					background: $maincolor;
+					height: 90upx;
+					line-height: 90upx;
+					border-radius: 45upx;
+					text-align: center;
+					color: #fff;
+					font-size: 32upx;
+				}
+			}
+
+			.homeSwiper {
+				margin-bottom: 40upx;
+
+				swiper {
+					height: 200upx;
+
+					image {
+						width: 690upx;
+					}
+				}
+			}
+
+			.agency {
+				.agencyList {
+					padding-top: 40upx;
+
+					>view:nth-child(2n) {
+						padding-left: 15upx;
+					}
+
+					>view:nth-child(2n-1) {
+						padding-right: 15upx;
+					}
+
+					>view {
+						display: inline-block;
+						width: 50%;
+
+						.itemCon {
+							box-shadow: 0 0 5px #ccc;
+							border-radius: 10upx;
+							margin-bottom: 30upx;
+
+							image {
+								width: 100%;
+							}
+						}
+					}
+
+				}
+
+			}
+		}
+	}
+
+	/* 个人中心*/
+	.editPerson {
+		display: flex;
+		justify-content: space-between;
+		padding: 30upx;
+		align-items: center;
+
+		.editLeft {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.photo {
+				width: 120upx;
+				height: 120upx;
+				border-radius: 50%;
+				overflow: hidden;
+				margin-right: 30upx;
+
+				image {
+					width: 100%;
+				}
+			}
+
+			.name {
+				.per_name {
+					color: #333;
+					font-size: 36upx;
+					margin-bottom: 20upx;
+				}
+
+				.phone {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					image {
+						width: 32upx;
+						margin-right: 10upx;
+					}
+
+					text {
+						font-size: 24upx;
+						color: #999;
+					}
+				}
+			}
+		}
+
+		.editRight {
+			font-size: 24upx;
+			color: #999;
+			width: 66px;
+			height: 22px;
+			line-height: 22px;
+			border-radius: 11px;
+			border: 1px solid #cecece;
+			text-align: center;
+		}
+	}
+
+	.nolog {
+		padding: 40upx;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		align-items: center;
+
+		button {
+			width: 100%;
+		}
+
+		.photo {
 			width: 120upx;
 			height: 120upx;
 			border-radius: 50%;
 			overflow: hidden;
-			margin-right: 30upx;
-			image{
+			margin-bottom: 30upx;
+
+			image {
 				width: 100%;
 			}
 		}
-		.name{
-			.per_name{
-				color: #333;
-				font-size: 36upx;
-				margin-bottom: 20upx;
-			}
-			.phone{
+	}
+
+	.personLogout {
+		position: fixed;
+		bottom: 20px;
+		left: 0;
+		width: 750upx;
+
+		.logoutBtn {
+			text-align: center;
+			width: 84%;
+			margin: 0 auto;
+			background-color: $maincolor;
+			color: #fff;
+			height: 92upx;
+			line-height: 92upx;
+			border-radius: 46upx;
+			font-size: 32upx;
+		}
+	}
+
+	/* 开户 */
+	.accountCon {
+		.listRe {
+			padding-left: 30upx;
+
+			.line {
+				height: 104upx;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				image{
-					width: 32upx;
-					margin-right: 10upx;
-				}
-				text{
-					font-size: 24upx;
-					color: #999;
-				}
-			}
-		}
-	}
-	
-	.editRight{
-		font-size: 24upx;
-		color: #999;
-		width: 66px;
-		height: 22px;
-		line-height: 22px;
-		border-radius: 11px;
-		border: 1px solid #cecece;
-		text-align: center;
-	}
-}
-.nolog{
-	padding: 40upx;
-	display: flex;
-	justify-content: space-between;
-	flex-direction: column;
-	align-items: center;
-	button{
-		width: 100%;
-	}
-	.photo{
-		width: 120upx;
-		height: 120upx;
-		border-radius: 50%;
-		overflow: hidden;
-		margin-bottom: 30upx;
-		image{
-			width: 100%;
-		}
-	}
-}
-.personLogout{
-	position: fixed;
-	bottom: 20px;
-	left: 0;
-	width: 750upx;
-	.logoutBtn{
-		text-align: center;
-		width: 84%;
-		margin: 0 auto;
-		background-color: $maincolor;
-		color: #fff;
-		height: 92upx;
-		line-height: 92upx;
-		border-radius: 46upx;
-		font-size: 32upx;
-	}
-}
-/* 开户 */
-.accountCon{
-	.listRe{
-		padding-left: 30upx;
-		.line{
-			height: 104upx;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			border-bottom: 1px solid #ececec;
-			padding-right: 30upx;
-			.listname{
-				height: 100%;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				text{
-					font-size: 28upx;
-					flex-shrink: 0;
-				}
-				input{
+				border-bottom: 1px solid #ececec;
+				padding-right: 30upx;
+
+				.listname {
+					height: 100%;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					text {
+						font-size: 28upx;
+						flex-shrink: 0;
+					}
+
+					input {
 						margin-left: 25upx;
 						font-size: 28upx;
 						height: 100%;
-				}
-				picker{
-					display: inline-block;
-					width: 400upx;
-					height: 100%;
-					.uni-input{
-						height: 100upx;
-						display: flex;
-						justify-content: space-between;
-						align-items: center;
-						font-size: 28upx;
-						color: #666;
+					}
+
+					picker {
+						display: inline-block;
+						width: 400upx;
+						height: 100%;
+
+						.uni-input {
+							height: 100upx;
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+							font-size: 28upx;
+							color: #666;
+						}
 					}
 				}
-			}
-			.arrow{
-				image{
-					width: 32upx;
+
+				.arrow {
+					image {
+						width: 32upx;
+					}
+				}
+
+				.getcode {
+					background: $maincolor;
+					border-radius: 10upx;
+					padding: 10upx 20upx;
+					color: #fff;
 				}
 			}
-			.getcode{
-				background: $maincolor;
-				border-radius: 10upx;
-				padding: 10upx 20upx;
-				color: #fff;
-			}
-		}
-		.fullInpt{
-			.listname{
-				width: 100%;
-				input{
+
+			.fullInpt {
+				.listname {
 					width: 100%;
-					flex-shrink: 1;
+
+					input {
+						width: 100%;
+						flex-shrink: 1;
+					}
 				}
 			}
 		}
 	}
-}
 
 
 
-.commonBtn{
-	padding: 40upx;
-	.con{
-		background: $maincolor;
-		height: 90upx;
-		line-height: 90upx;
-		border-radius: 45upx;
-		text-align: center;
-		color: #fff;
-		font-size: 32upx;
+	.commonBtn {
+		padding: 40upx;
+
+		.con {
+			background: $maincolor;
+			height: 90upx;
+			line-height: 90upx;
+			border-radius: 45upx;
+			text-align: center;
+			color: #fff;
+			font-size: 32upx;
+		}
 	}
-}
 
-/* 地址列表 */
-.addressContainer{
-	padding: 0 40upx;
-	.addressCon{
-		padding: 20upx 30upx;
-		border-bottom: 1px solid #ececec;
-		.addressItem{
-			>view:first-child{
-				color: #333;
-				font-size: 30upx;
-				font-weight: 700;
-			}
-			.mr{
-				font-size: 24upx;
-				color: #FFBE00;
-				display: inline-block;
-				padding: 0 5upx;
-				background: rgba(255,190,0,0.20);
-				border-radius: 6px;
-			}
-			.userName{
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				>view:first-child{
-					text{
-						font-size: 12px;
-						color: #666666;
-						display: inline-block;
-						margin-right: 20upx;
-					}
-					
+	/* 地址列表 */
+	.addressContainer {
+		padding: 0 40upx;
+
+		.addressCon {
+			padding: 20upx 30upx;
+			border-bottom: 1px solid #ececec;
+
+			.addressItem {
+				>view:first-child {
+					color: #333;
+					font-size: 30upx;
+					font-weight: 700;
 				}
-				>view:last-child{
-					
-					view{
-						display: inline-block;
-						width: 60upx;
-						padding: 10upx;
-						image{
-							width:100%;
+
+				.mr {
+					font-size: 24upx;
+					color: #FFBE00;
+					display: inline-block;
+					padding: 0 5upx;
+					background: rgba(255, 190, 0, 0.20);
+					border-radius: 6px;
+				}
+
+				.userName {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					>view:first-child {
+						text {
+							font-size: 12px;
+							color: #666666;
+							display: inline-block;
+							margin-right: 20upx;
+						}
+
+					}
+
+					>view:last-child {
+
+						view {
+							display: inline-block;
+							width: 60upx;
+							padding: 10upx;
+
+							image {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+
+		}
+	}
+
+	/* 订单 */
+	.orders {
+		height: 100vh;
+		background: $mainBgcolor;
+
+		.orderTabs {
+			background: #fff;
+			display: flex;
+			justify-content: space-between;
+			position: relative;
+			height: 80upx;
+
+			.tab {
+				width: 100%;
+				text-align: center;
+				height: 80upx;
+				line-height: 80upx;
+				color: #999;
+
+				&.active {
+					color: #333;
+					font-size: 32upx;
+				}
+			}
+
+			.activeLine {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 20%;
+
+				&::before {
+					content: '';
+					display: block;
+					margin: 0 auto;
+					width: 30%;
+					height: 3px;
+					background: $maincolor;
+				}
+			}
+		}
+
+		.orderList {
+			height: calc(100vh - 80upx);
+			padding: 20upx 20upx 0;
+
+			.scrollView {
+				min-height: 100%;
+
+				.orderDetail {
+					padding: 0 20upx;
+					background: #FFFFFF;
+					border-radius: 10upx;
+					margin-bottom: 20upx;
+
+					.orderTitle {
+						@include myFlex(row);
+						border-bottom: 1px solid #ececec;
+						height: 88upx;
+						line-height: 88upx;
+
+						.orderNum {
+							@include ell;
+							font-size: 28upx;
+							color: #333;
+						}
+
+						text {
+							font-size: 12px;
+							color: #999;
+						}
+					}
+
+				}
+
+				.proitem {
+					.prodetail {
+						@include myFlex(row);
+						align-items: flex-start;
+						padding: 30upx 0;
+
+						>view {
+							@include myFlex(row);
+							align-items: flex-start;
+
+							view.name {
+								font-size: 28upx;
+								color: #333;
+							}
+
+							view.gg {
+								font-size: 20upx;
+								color: #999;
+								margin-bottom: 10upx;
+							}
+
+							view.num {
+								font-size: 20upx;
+								color: #999;
+							}
+
+							image {
+								width: 140upx;
+								margin-right: 20upx;
+							}
+
+						}
+
+						.price {
+							color: #333;
+							font-size: 32upx;
+						}
+
+					}
+
+					.btn {
+						>view {
+							min-width: 160upx;
+							height: 60upx;
+							border: 1px solid #999999;
+							color: #999;
+							font-size: 14px;
+							border-radius: 28upx;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							margin-left: 20upx;
+						}
+
+						.gopay {
+							background: $maincolor;
+							border: none;
+							color: #fff;
+
+						}
+
+						padding: 30upx 0 30upx 30upx;
+						display: flex;
+						justify-content: flex-end;
+					}
+
+					.total {
+						display: flex;
+						justify-content: flex-end;
+						color: #999;
+
+						.freight {
+							margin-left: 20upx;
+
+							text {
+								font-size: 36upx;
+								color: #333;
+							}
+
+							&>text:first-child {
+								font-size: 28upx;
+								color: #666;
+								display: inline-block;
+								margin-right: 10upx;
+							}
 						}
 					}
 				}
 			}
 		}
-	
 	}
-}
+
+	/* 订单详情 */
+	.orderDetailPage {
+		.detailCon {
+			min-height: 100vh;
+			padding: 0 30upx;
+			.detailTitle {
+				font-size: 48upx;
+				color: #333333;
+				height: 100upx;
+				line-height: 100upx;
+			}
+
+			.orderAddress {
+				@include myFlex(row);
+				background: #fff;
+				padding: 20upx;
+				border-radius: 10upx;
+				margin-bottom: 20upx;
+
+				.adda {
+					flex-shrink: 1;
+					width: 90%;
+				}
+
+				.addresstext {
+					width: 100%;
+					@include ell();
+					font-size: 14px;
+					color: #333333;
+				}
+
+				.persongDetail {
+					font-size: 12px;
+					color: #666666;
+
+					text {
+						display: inline-block;
+						margin-right: 10upx;
+					}
+				}
+
+				.arrow {
+					flex-shrink: 0;
+
+					image {
+						width: 34upx;
+					}
+				}
+			}
+
+			.proDetail {
+				@include blockBg;
+				margin-bottom: 30upx;
+
+				.prodetail {
+					@include myFlex(row);
+					align-items: flex-start;
+					padding: 30upx 0;
+
+					>view {
+						@include myFlex(row);
+						align-items: flex-start;
+
+						view.name {
+							font-size: 28upx;
+							color: #333;
+						}
+
+						view.gg {
+							font-size: 20upx;
+							color: #999;
+							margin-bottom: 10upx;
+						}
+
+						view.num {
+							font-size: 20upx;
+							color: #999;
+						}
+
+						image {
+							width: 140upx;
+							margin-right: 20upx;
+						}
+					}
+
+					.price {
+						color: #333;
+						font-size: 32upx;
+
+					}
+
+				}
+
+				.totalprice {
+					height: 100upx;
+					@include myFlex(row);
+					border-top: 1px solid #ececec;
+
+					text {
+						font-size: 28upx;
+
+						&::before {
+							content: '￥ ';
+							font-size: 30upx;
+						}
+					}
+
+					>text:last-child {
+						font-weight: 600;
+						font-size: 36upx;
+
+					}
+				}
+
+				.summation {
+					height: 128upx;
+
+					>text:last-child {
+						font-weight: 600;
+						font-size: 42upx;
+					}
+				}
+			}
+
+		}
+
+		.orderMsg {
+			@include blockBg;
+			
+			.title {
+				height: 100upx;
+				line-height: 100upx;
+				font-size: 28upx;
+				color: #333;
+				font-weight: 600;
+				border-bottom: 1px solid #ececec;
+			}
+
+			.orderNum {
+				@include myFlex(row);
+				height: 100upx;
+				font-size: 28upx;
+
+				>text {
+					color: #999;
+				}
+
+				.textRight {
+					text {
+						color: #333;
+					}
+
+					.copy {
+						font-size: 24upx;
+						height: 36upx;
+						line-height: 34upx;
+						border-radius: 17upx;
+						text-align: center;
+						border: 1px solid #999;
+						padding: 0 10upx;
+						display: inline-block;
+						margin-left: 20upx;
+					}
+				}
+			}
+			.call{
+				.callBtn{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: 100upx;
+					image{
+						width: 36upx;
+						margin-right: 20upx;
+					}
+					text{
+						font-size: 32upx;
+						color: #999;
+					}
+				}
+			}
+			
+		}
+		.orderBtn{
+			.btn {
+				>view {
+					min-width: 160upx;
+					height: 60upx;
+					border: 1px solid #999999;
+					color: #999;
+					font-size: 14px;
+					border-radius: 28upx;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin-left: 20upx;
+				}
+			
+				.gopay {
+					background: $maincolor;
+					border: none;
+					color: #fff;
+			
+				}
+			
+				padding: 30upx 0 30upx 30upx;
+				display: flex;
+				justify-content: flex-end;
+			}
+		}
+	}
+	
+	/* 商城 */
+	.store{
+		height: 100vh;
+		.storeSearch{
+			height: 52px;
+		}
+		.proList{
+			height: calc(100vh - 52px);
+			overflow: auto;
+			>view:nth-child(odd){
+				padding-left: 30upx;
+				padding-right: 15upx;
+			}
+			>view:nth-child(even){
+				padding-right: 30upx;
+				padding-left: 15upx;
+			}
+			.proCon{
+				width: 50%;
+				display: inline-block;
+				margin-bottom: 30upx;
+				.proShow{
+					background-color: #fff;
+					border-radius: 10upx;
+					box-shadow: 0 0 20upx #eee;
+					padding-bottom: 20upx;
+					.proImg{
+						image{
+							width: 100%;
+						}
+					}
+					view{
+						margin-top: 20upx;
+					}
+					.name{
+						font-size: 14px;
+						color: #333;
+					}
+					.price{
+						color: $maincolor;
+						font-size: 14px;
+						
+					}
+				}
+				>navigator{
+					text-align: center;
+				}
+			}
+
+			
+		}
+	}
+	/* 商品详情 */
+	.proDtailPage{
+		padding: 10upx 0;
+		background-color: $mainBgcolor;
+		.proImgs{
+			position: relative;
+			swiper{
+				width: 750upx;
+				height: 520upx;
+				image{
+					width:100%;
+				}
+			}
+			.imgNum{
+				position: absolute;
+				right: 50upx;
+				bottom: 50upx;
+				color: #999;
+			}
+		}
+		.priceshare{
+			@include myFlex(row);
+			padding: 0 30upx;
+			>view{
+				width:50%;
+			}
+			>view:first-child{
+				font-size:48upx;
+				color: $maincolor;
+				text{
+					font-size: 14px;
+				}
+			}
+			>view:last-child{
+				color: #999;
+				vertical-align: middle;
+				text-align: right;
+				image{
+					width: 38upx;
+					font-size: 14px;
+					vertical-align: middle;
+					margin-right: 10upx;
+				}
+			}
+		}
+		.name{
+			padding: 0 30upx;
+			font-size: 14px;
+			font-weight: 500;
+		}
+		.inventory{
+			@include myFlex(row);
+			padding: 20upx 30upx 10upx;
+			border-bottom: 1px solid #ececec;
+			text{
+				font-size: 12px;
+				color: #999;
+				height: 22px;
+				position: relative;
+				display: inline-block;
+				padding-left: 20upx;
+				&:before{
+					content: '';
+					width: 4px;
+					height: 4px;
+					background: $maincolor;
+					border-radius: 50%;
+					display: inline-block;
+					position: absolute;
+					top: 50%;
+					margin-top: -2px;
+					left: 0;
+				}
+			}
+		}
+		.chosespecification{
+			@include myFlex(row);
+			padding: 30upx;
+			>view:first-child{
+				text:first-child{
+					color: #333;
+					font-size: 14px;
+					display: inline-block;
+					margin-right: 30upx;
+				}
+				text:last-child{
+					color: #999;
+					font-size: 14px;
+				}
+			}
+			.arrow{
+				font-size: 0;
+				image{
+					width: 34upx;
+				}
+			}
+		}
+		.proDetail{
+			border-top: 30upx solid #ececec;
+			padding: 0 30upx;
+			padding-bottom: 70px;
+			.title{
+				color: #333;
+				font-size: 14px;
+				padding: 30upx 0;
+			}
+		}
+		.choseGgTab{
+			background: #fff;
+			border-top-left-radius: 20upx;
+			border-top-right-radius: 20upx;
+			padding: 40upx 30upx;
+			position: relative;
+			.close{
+				position: absolute;
+				top: 20upx;
+				right: 20upx;
+			}
+			.proDeatail{
+				@include myFlex(row);
+				align-items: flex-start;
+				border-bottom: 1px solid #ececec;
+				padding-bottom: 30upx;
+				.proimg{
+					width: 200upx;
+					margin-right: 30upx;
+					image{
+						width: 100%;
+					}
+				}
+				.proprice{
+					width: 100%;
+					flex-shrink: 1;
+					.priceText{
+						font-size: 36upx;
+						color: $maincolor;
+					}
+					.proinventory{
+						color: #999;
+						font-size: 12px;
+					}
+				}
+			}
+			.standard{
+				.btn{
+					padding: 30upx 0;
+					view{
+						margin-right: 30upx;
+						text-align: center;
+						font-size: 28upx;
+						min-width: 120upx;
+						height: 60upx;
+						line-height: 60upx;
+						border-radius: 30upx;
+						background: #F6F7F8;
+						display: inline-block;
+					}
+				}
+			}
+			.buyNum{
+				@include myFlex(row);
+				padding: 30upx 0;
+			}
+			.buyBtns{
+				padding-top: 30upx;
+				.btn{
+					background: $maincolor;
+					@include myBtn;
+					
+				}
+			}
+		}
+		.buyBtn{
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			@include myFlex(row);
+			width: 100%;
+			padding: 20upx 30upx;
+			background: #fff;
+			image{
+				width:80upx;
+			}
+			.btn{
+				@include myFlex(row);
+				width: calc(100% - 60px);
+				height: 72upx;
+				border-radius: 36upx;
+				overflow: hidden;
+				view:first-child{
+					background: #FDD145;
+				}
+				view:last-child{
+					background: $maincolor;
+				}
+				view{
+					color: #fff;
+					width: 50%;
+					text-align: center;
+					height: 100%;
+					line-height: 72upx;
+				}
+			}
+		}
+	}
+	.toCart{
+		position: fixed;
+		right: 0;
+		bottom: 200upx;
+		width: 112upx;
+		image{
+			width: 100%;
+		}
+	}
+	.shoppingCart{
+		height: 100vh;
+		padding-bottom: 60px;
+		background-color: #ececec;
+		.bottomTab{
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			background: #fff;
+			padding: 20upx;
+			@include myFlex(row);
+			.totalMoney{
+				text:nth-child(1){
+					font-size: 12px;
+					color: #999;
+				}
+				text:nth-child(2){
+					font-size: 14px;
+					color: #333;
+				}
+				text:nth-child(3){
+					font-size: 14px;
+					color: $maincolor;
+				}
+			}
+			.jsBtn{
+				height: 40px;
+				line-height: 40px;
+				border-radius: 20px;
+				text-align: center;
+				font-size: 14px;
+				color: #fff;
+				width: 90px;
+				background: $maincolor;
+			}
+		}
+		.cartsList{
+			padding-top: 20upx;
+			.content-box{
+				padding: 20upx 0;
+				background: #fff;
+				@include myFlex(row);
+				align-items: flex-end;
+				width: 100%;
+				border-bottom: 1px solid #ececec;
+			.cartdetailCon{
+				@include myFlex(row);
+					.cartdetail{
+						@include myFlex(row);
+						image{
+							width: 120upx;
+							margin-right: 20upx;
+						}
+						.name{
+							font-size: 14px;
+							color: #333;
+						}
+						.gg{
+							font-size: 12px;
+							color: #999;
+						}
+						.price{
+							font-size: 14px;
+							color: $maincolor;
+						}
+					}
+				}
+			}
+		}
+	}

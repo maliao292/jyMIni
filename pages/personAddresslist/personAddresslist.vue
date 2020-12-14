@@ -12,7 +12,7 @@
 						<view @click="toggleMessage('warn')">
 							<image src="../../static/image/del.png" mode="widthFix"></image>
 						</view>
-						<view>
+						<view @click="toEditpage(item,ind)">
 							<image src="../../static/image/edit.png" mode="widthFix"></image>
 						</view>
 					</view>
@@ -20,7 +20,7 @@
 			</view>
 		</view>
 		<view class="commonBtn">
-			<view class="con">新 增 地 址</view>
+			<view class="con" @click="toEditpage({})">新 增 地 址</view>
 		</view>
 		<!-- 对话框 -->
 		<uni-popup id="popupDialog" ref="popupDialog" type="dialog" @change="change">
@@ -62,6 +62,16 @@
 			}
 		},
 		methods: {
+			toEditpage(obj = {}, ind = -1) {
+				let serialize = Object.keys(obj).map(res => {
+					return res + '=' + obj[res]
+				})
+				let params = serialize.length > 0 ? ('?' + serialize.join('&')+'&ind='+ind) : ''
+				uni.navigateTo({
+					url: '/pages/personAddressEdit/personAddressEdit' + params
+				});
+				/* 新增地址页面跳转 */
+			},
 			toggleMessage(type) {
 				this.msgType = type
 				switch (type) {

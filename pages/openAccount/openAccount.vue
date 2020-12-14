@@ -29,7 +29,7 @@
 			<view class="line fullInpt">
 				<view class="listname">
 					<text>手机号</text>
-					<input type="number" value="" />
+					<input type="number" value="" v-model="phone" />
 				</view>
 
 			</view>
@@ -39,8 +39,11 @@
 					<input type="number" value="" />
 				</view>
 				<view class="">
-					<view class="getcode" @click="getcode">
+					<view class="getcode" @click="getcode" v-if="timeout==0">
 						获取验证码
+					</view>
+					<view class="getcode" v-else>
+						{{timeout}}秒 后获取
 					</view>
 				</view>
 			</view>
@@ -54,12 +57,19 @@
 </template>
 
 <script>
+	import {
+		setcode
+	} from '../../request/index.js'
 	export default {
 		data() {
 			return {
+				timeout: 0,
 				index: null,
 				countDown: 0,
 				cardId: '',
+				msgobj: {
+					phone: ''
+				},
 				array: [{
 					name: '浦发银行'
 				}, {
@@ -70,14 +80,40 @@
 			}
 		},
 		onLoad() {
-		
+
 		},
 		methods: {
 			bindPickerChange: function(e) {
 				this.index = e.detail.value
 			},
 			getcode() {
-
+				if (!this.phone) {
+					uni.showModal({
+						title: '请填写手机号码'
+					})
+					return false;
+				}
+				if (!(/^1[34578]\d{9}$/.test(this.phone))) {
+					uni.showModal({
+						title: '手机号码有误，请重新填写'
+					})
+					return false;
+				}
+				this.msgobj.phone = this.phone
+				setcode({
+					phone: this.msgobj.phone
+				}).then(res => {
+					console.log(res);
+				})
+				this.timeout = 60
+				let times = null;
+				times = setInterval(_ => {
+					this.timeout--
+					if(this.timeout<=0){
+						this.timeout=0
+						clearInterval(times)
+					}
+				}, 1000)
 			},
 			openAccount() {
 				uni.showModal({

@@ -7,7 +7,12 @@
     "pages/openAccount/openAccount",
     "pages/editPersonMsg/editPersonMsg",
     "pages/personAddresslist/personAddresslist",
-    "pages/personAddressEdit/personAddressEdit"
+    "pages/personAddressEdit/personAddressEdit",
+    "pages/personFeedback/personFeedback",
+    "pages/personOrders/personOrders",
+    "pages/personOrderDetail/personOrderDetail",
+    "pages/storeProDetail/storeProDetail",
+    "pages/shoppingCart/shoppingCart"
   ],
   "subPackages": [],
   "window": {
@@ -48,5 +53,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap79.json"
 }

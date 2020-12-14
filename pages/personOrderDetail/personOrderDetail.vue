@@ -1,0 +1,99 @@
+<template>
+	<view class="orderDetailPage">
+		<view class="detailCon">
+			<view class="detailTitle">待付款</view>
+			<view class="orderAddress">
+				<view class="adda">
+					<view class="addresstext">香港特别行政香港特别行政香港特别行政香港特别行政705号</view>
+					<view class="persongDetail">
+						<text>付瑾平</text>
+						<text>15961976688</text>
+					</view>
+				</view>
+				<view class="arrow">
+					<image src="../../static/image/rightArrow.png" mode="widthFix"></image>
+				</view>
+			</view>
+			<view class="proDetail">
+				<view class="prodetail" url="/pages/personOrderDetail/personOrderDetail">
+					<view class="">
+						<image src="../../static/image/i1.png" mode="widthFix"></image>
+						<view class="">
+							<view class="name">9999黄金元宝</view>
+							<view class="gg">规格：“20g”</view>
+							<view class="num">× 1</view>
+						</view>
+					</view>
+					<view class="price">
+						￥ 8400
+					</view>
+				</view>
+				<view class="totalprice freight">
+					<text>运费</text>
+					<text>7.00</text>
+				</view>
+				<view class="totalprice summation">
+					<text>合计</text>
+					<text>7.00</text>
+				</view>
+			</view>
+			<view class="orderMsg">
+				<view class="title">订单信息</view>
+				<view class="orderMark">
+					<view class="orderNum">
+						<text>订单编号</text>
+						<view class="textRight">
+							<text>77951960637105303</text>
+							<text class="copy" @click="paste('123')">复制</text>
+						</view>
+					</view>
+					<view class="orderNum">
+						<text>下单时间</text>
+						<view class="textRight">
+							<text>2020-08-18 16:55</text>
+						</view>
+					</view>
+					<view class="orderNum">
+						<text>备注</text>
+						<view class="textRight">
+							<text>无</text>
+						</view>
+					</view>
+				</view>
+				<view class="call">
+					<view class="callBtn">
+						<image src="../../static/image/icon_customservice_color@2x.png" mode="widthFix"></image>
+						<text>联系客服</text>
+					</view>
+
+				</view>
+			</view>
+			<view class="orderBtn">
+				<view class="btn">
+					<view class=""> 再次购买 </view>
+					<view class=""> 取消订单 </view>
+					<view class=""> 再去逛逛 </view>
+					<view class="gopay"> 去付款 </view>
+				</view>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+
+			}
+		},
+		methods: {
+			paste(value) {
+				uni.setClipboardData({
+					data: value
+				});
+			}
+		}
+	}
+</script>
+
